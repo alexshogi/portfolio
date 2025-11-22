@@ -4,7 +4,7 @@ export const NAVLINKS= [
     url: '#hero'
   },
   {
-    label : 'About',
+    label : 'About me',
     url: '#about'
   },
   {
@@ -25,43 +25,43 @@ export const PROFILE = {
     return `${this.firstname} ${this.lastname}`
   },
   role : 'Front-End Developer & Team Lead',
-  avatar: '/images/profile.jpg'
+  avatar: '/images/profile.webp'
 }
 
 export const HERO = {
   badge: 'Available for freelance',
-  headline: `Hey, I'm ${PROFILE.fullname}. A ${PROFILE.role}`,
-  subline : "I am a fullstack developer and designer with an incredibly impressive experience working on various tasks who has a passion for building responsive, cool looking, and easy to visit website applications."
+  headline: "Hey, I&rsquo;m Alexey Shagiakhmetov. A&nbsp;Front-End Developer &amp;&nbsp;Team Lead",
+  subline : "I&nbsp;am a&nbsp;fullstack developer and designer with an&nbsp;incredibly impressive experience working on&nbsp;various tasks who has a&nbsp;passion for building responsive, cool looking, and easy to&nbsp;visit website applications."
 }
 
 export const SERVICE = {
   label: 'service',
   headline: 'Custom frontend and backend solutions for your requirements.',
-  subline: 'I specialize in crafting user-centered solutions for businesses and individuals. Let’s create something extraordinary together.',
+  subline: 'I&nbsp;specialize in&nbsp;creating user-centered solutions for businesses and individuals. Let&rsquo;s create something extraordinary together.',
   services: [
     {
       name: "Web Development",
       icon: 'Scroll',
-      description: 'Web development refers to building, creating, and maintaining websites. It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet, i.e., websites.'
+      description: 'Web development refers to&nbsp;building, creating, and maintaining websites. It&nbsp;includes aspects such as&nbsp;web design, web publishing, web programming, and database management. It&nbsp;is&nbsp;the creation of&nbsp;an&nbsp;application that works over the internet, i.e., websites.'
     },
     {
       name: "Mobile Development",
       icon: 'MobileProgramming',
-      description: 'Mobile application development is the process of making software for smartphones, tablets and digital assistants, most commonly for the Android and iOS operating systems.'
+      description: 'Mobile application development is&nbsp;the process of&nbsp;making software for smartphones, tablets and digital assistants, most commonly for the Android and iOS operating systems.'
     },
     {
       name: "UI/UX Design",
       icon: 'PenTool2',
-      description: 'In digital design, user interface (UI) refers to the interactivity, look, and feel of a product screen or web page, while user experience (UX) covers a user’s overall experience with the product or website'
+      description: 'In&nbsp;digital design, user interface (UI) refers to&nbsp;the interactivity, look, and feel of&nbsp;a&nbsp;product screen or&nbsp;web page, while user experience (UX) covers a&nbsp;user&rsquo;s overall experience with the product or&nbsp;website.'
     },
    
   ]
 }
 
 export const WORK = {
-  label: 'work',
-  headline: 'Custom IT solutions for your requirements.',
-  subline: 'I specialize in crafting user-centered solutions for businesses and individuals. Let’s create something extraordinary together.',
+  label: 'works',
+  headline: 'Custom IT&nbsp;solutions for your requirements.',
+  subline: 'I&nbsp;specialize in&nbsp;creating user-centered solutions for businesses and individuals. Let&rsquo;s create something extraordinary together.',
   works: [
     {
       name: "Boats shop",
@@ -75,7 +75,7 @@ export const WORK = {
       type: 'IT school website'
     },
     {
-      name: "Let's Food UI Kit",
+      name: "Restaurant menu",
       thumbnails: 'kaif-1.webp',
       type: 'Layout'
     },
@@ -100,14 +100,16 @@ export const WORK = {
 }
 
 export const ABOUT = {
-  label: 'Let me introduce myself',
+  label: 'Let me&nbsp;introduce myself',
   introduce: [
-    `My name is ${PROFILE.fullname}, and I am a passionate ${PROFILE.role}. I specialize in creating seamless and visually appealing user interfaces, combining design and development to enhance user experiences.`,
-    "I love turning ideas into interactive and functional web applications. Excited to collaborate and build amazing digital products together!"
+    "My&nbsp;name is&nbsp;Alexey Shagiakhmetov, and I&nbsp;am a&nbsp;passionate Front-End Developer &amp;&nbsp;Team Lead. I&nbsp;specialize in&nbsp;creating seamless and visually appealing user interfaces, combining design and development to&nbsp;enhance user experiences.",
+    "I love turning ideas into interactive and functional web applications. Excited to collaborate and build amazing digital products together!",
+    "More than 9 years of experience.",
+    "Results-oriented."
   ]
 }
 
 export const CTA = {
-  label: 'Let’s Build Something Great Together',
-  description: 'Looking for a modern, seamless website or app interface? I`m here to bring your ideas to life.'
+  label: 'Let&rsquo;s Build Something Great Together',
+  description: 'Looking for a&nbsp;modern, seamless website or&nbsp;app interface? I`m here to&nbsp;bring your ideas to&nbsp;life.'
 }

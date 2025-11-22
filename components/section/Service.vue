@@ -3,14 +3,8 @@
     <section id="service" class="container">
     <!-- Content -->
     <p class="badge">{{ SERVICE.label }}</p>
-    <h2
-      class="section-title"
-    >
-      {{ SERVICE.headline }}
-    </h2>
-    <p class="paragraph mt-4 max-w-xl">
-      {{ SERVICE.subline }}
-    </p>
+    <h2 class="section-title" v-html="SERVICE.headline"></h2>
+    <p class="paragraph mt-4 max-w-xl" v-html="SERVICE.subline"></p>
 
     <!-- Services List -->
     <div class="grid md:grid-cols-3 gap-6 mt-16">
@@ -29,7 +23,7 @@
        
           <div class="mt-5">
             <h4 class="text-xl font-semibold tracking-wide text-white">{{ item.name }}</h4>
-            <p class="text-white/50 mt-2">{{ item.description }}</p>
+            <p class="text-white/50 mt-2" v-html="item.description"></p>
           </div>
        </div>
 

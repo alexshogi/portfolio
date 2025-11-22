@@ -3,14 +3,8 @@
   <section id="work" class="container">
     <!-- Content -->
     <p class="badge">{{ WORK.label }}</p>
-    <h2
-      class="section-title"
-    >
-      {{ WORK.headline }}
-    </h2>
-    <p class="paragraph mt-4 max-w-xl">
-      {{ WORK.subline }}
-    </p>
+    <h2 class="section-title" v-html="WORK.headline"></h2>
+    <p class="paragraph mt-4 max-w-xl" v-html="WORK.subline"></p>
 
     <!-- Works List -->
     <div class="grid md:grid-cols-2 gap-6 mt-16">

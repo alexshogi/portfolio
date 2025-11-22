@@ -8,14 +8,8 @@
       <div class="animate-pulse w-2 h-2 bg-primary rounded-full"></div> 
       <p class="text-center">{{ HERO.badge }}</p>
     </div>
-    <h1
-      class="max-w-4xl mx-auto text-center text-4xl md:text-5xl lg:text-6xl text-white font-bold mt-4 !leading-snug"
-    >
-      {{ HERO.headline }}
-    </h1>
-    <p class="paragraph mt-4 text-center max-w-xl mx-auto">
-      {{ HERO.subline }}
-    </p>
+    <h1 class="max-w-4xl mx-auto text-center text-4xl md:text-5xl lg:text-6xl text-white font-bold mt-4 !leading-snug" v-html="HERO.headline"></h1>
+    <p class="paragraph mt-4 text-center max-w-xl mx-auto" v-html="HERO.subline"></p>
     <div class="flex gap-4 items-center mt-8">
       <Button label="View Work" to="#work" />
       <Button label="Contact Me" to="https://t.me/shogiboss" variant="btn-dark" />

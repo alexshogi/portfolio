@@ -6,10 +6,8 @@
     <section class="max-w-5xl mx-auto px-4 lg:px-0">
     <div class="mesh-gradient flex items-center flex-col rounded-3xl border bg-[#0b061a] border-white/10 p-10 relative">
         <div class="flex flex-col items-center">
-          <h2 class="text-center !max-w-xl section-title ">{{ CTA.label }}</h2>
-        <p class="paragraph max-w-xl text-center mt-8">
-          {{ CTA.description }}
-        </p>
+          <h2 class="text-center !max-w-xl section-title" v-html="CTA.label"></h2>
+        <p class="paragraph max-w-xl text-center mt-8" v-html="CTA.description"></p>
         <Button class="mt-10" to="https://t.me/shogiboss" variant="btn-primary" label="Start Collaboration"/>
 
         <div class="my-8 w-4/5 h-[1px] bg-gradient-to-r from-white/0 via-white/20 to-white/0 "></div>
