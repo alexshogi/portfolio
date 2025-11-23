@@ -2,14 +2,14 @@
  <LayoutScrollSmooth>
   <section id="work" class="container">
     <!-- Content -->
-    <p class="badge">{{ WORK.label }}</p>
-    <h2 class="section-title" v-html="WORK.headline"></h2>
-    <p class="paragraph mt-4 max-w-xl" v-html="WORK.subline"></p>
+    <p class="badge">{{ $t('WORK.label') }}</p>
+    <h2 class="section-title" v-html="$t('WORK.headline')"></h2>
+    <p class="paragraph mt-4 max-w-xl" v-html="$t('WORK.subline')"></p>
 
     <!-- Works List -->
     <div class="grid md:grid-cols-2 gap-6 mt-16">
 
-      <div class="p-3 border bg-[#0b061a]/40 backdrop-blur-sm border-white/10 rounded-2xl relative flex items-center group" v-for="item in WORK.works">
+      <div class="p-3 border bg-[#0b061a]/40 backdrop-blur-sm border-white/10 rounded-2xl relative flex items-center group" v-for="(item, index) in WORK.works">
         <div class="overflow-hidden aspect-[4/3] rounded-lg ">
           <img class="group-hover:scale-105 transition-all duration-500 w-full h-full object-cover" :src="'/images/work/' + item.thumbnails" :alt="'Thumbnail ' + item.name ">
         </div>
@@ -18,8 +18,8 @@
           <div>
            <div class="flex items-center justify-between">
             <div>
-              <h3 class="text-white text-lg lg:text-xl tracking-wide font-bold ">{{ item.name }}</h3>
-              <p class=" font-medium uppercase tracking-wide text-gray-600">{{item.type}}</p>
+              <h3 class="text-white text-lg lg:text-xl tracking-wide font-bold ">{{ $t(`WORK.work-${index + 1}.name`) }}</h3>
+              <p class=" font-medium uppercase tracking-wide text-gray-600">{{ $t(`WORK.work-${index + 1}.type`) }}</p>
             </div>
            <NuxtLink v-if="item.live_demo" :to="item.live_demo">
             <VsxIcon class="text-gray-400" iconName="ExportSquare" :size="24"  type="linear" />

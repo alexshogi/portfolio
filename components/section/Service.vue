@@ -2,13 +2,13 @@
   <LayoutScrollSmooth>
     <section id="service" class="container">
     <!-- Content -->
-    <p class="badge">{{ SERVICE.label }}</p>
-    <h2 class="section-title" v-html="SERVICE.headline"></h2>
-    <p class="paragraph mt-4 max-w-xl" v-html="SERVICE.subline"></p>
+    <p class="badge">{{ $t('SERVICE.label') }}</p>
+    <h2 class="section-title" v-html="$t('SERVICE.headline')"></h2>
+    <p class="paragraph mt-4 max-w-xl" v-html="$t('SERVICE.subline')"></p>
 
     <!-- Services List -->
     <div class="grid md:grid-cols-3 gap-6 mt-16">
-      <div class="card relative flex items-center p-10" v-for="item in SERVICE.services">
+      <div class="card relative flex items-center p-10" v-for="(item, index) in SERVICE.services">
        <div>
         <div>
           <div class="inline-flex p-2 rounded-lg border border-primary shadow-[0px_0px_15px_-3px_rgba(85,_132,_255,_0.5)]">
@@ -22,8 +22,8 @@
         </div>
        
           <div class="mt-5">
-            <h4 class="text-xl font-semibold tracking-wide text-white">{{ item.name }}</h4>
-            <p class="text-white/50 mt-2" v-html="item.description"></p>
+            <h4 class="text-xl font-semibold tracking-wide text-white">{{ $t(`SERVICE.service-name-${index + 1}`) }}</h4>
+            <p class="text-white/50 mt-2" v-html="$t(`SERVICE.service-desc-${index + 1}`)"></p>
           </div>
        </div>
 

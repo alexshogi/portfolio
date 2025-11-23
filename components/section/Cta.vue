@@ -6,32 +6,32 @@
     <section class="max-w-5xl mx-auto px-4 lg:px-0">
     <div class="mesh-gradient flex items-center flex-col rounded-3xl border bg-[#0b061a] border-white/10 p-10 relative">
         <div class="flex flex-col items-center">
-          <h2 class="text-center !max-w-xl section-title" v-html="CTA.label"></h2>
-        <p class="paragraph max-w-xl text-center mt-8" v-html="CTA.description"></p>
-        <Button class="mt-10" to="https://t.me/shogiboss" variant="btn-primary" label="Start Collaboration"/>
+          <h2 class="text-center !max-w-xl section-title" v-html="$t('CTA.label')"></h2>
+        <p class="paragraph max-w-xl text-center mt-8" v-html="$t('CTA.description')"></p>
+        <Button class="mt-10" to="https://t.me/shogiboss" variant="btn-primary" :label="$t('CTA.collaboration')"/>
 
         <div class="my-8 w-4/5 h-[1px] bg-gradient-to-r from-white/0 via-white/20 to-white/0 "></div>
 
         <div class="flex items-center gap-4 lg:gap-10">
           <NuxtLink
-          class="text-white/60 group text-sm lg:text-base"
-          v-for="link in NAVLINKS"
-          :to="link.url"
-        >
-          <div class="relative overflow-hidden">
-            <p
-              class="group-hover:-translate-y-7 duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
-            >
-              {{ link.label }}
-            </p>
-            <p
-              class="absolute top-7 left-0 group-hover:top-0 duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
-            >
-              {{ link.label }}
-            </p>
+            class="text-white/60 group text-sm lg:text-base"
+            v-for="link in NAVLINKS"
+            :to="link.url"
+          >
+            <div class="relative overflow-hidden">
+              <p
+                class="group-hover:-translate-y-7 duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              >
+                {{ $t(`NAVLINKS.${ link.label}`) }}
+              </p>
+              <p
+                class="absolute top-7 left-0 group-hover:top-0 duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              >
+                {{ $t(`NAVLINKS.${ link.label}`) }}
+              </p>
+            </div>
+          </NuxtLink>
           </div>
-        </NuxtLink>
-        </div>
         </div>
 
         <div

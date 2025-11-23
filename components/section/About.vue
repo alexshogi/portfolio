@@ -6,14 +6,14 @@
     <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-8">
       <!-- Content -->
       <div>
-        <p class="badge" v-html="ABOUT.label"></p>
-        <h2 class="section-title">Alexey Shagiakhmetov</h2>
+        <p class="badge" v-html="$t('ABOUT.label')"></p>
+        <h2 class="section-title">{{ $t('ABOUT.title') }}</h2>
 
-        <p class="paragraph mt-4" v-for="intro in ABOUT.introduce" v-html="intro"></p>
+        <p class="paragraph mt-4" v-for="(intro, index) in ABOUT.introduce" v-html="$t(`ABOUT.introduce-${index + 1}`)"></p>
 
         <Button
           class="mt-8"
-          label="Contact Me"
+          :label="$t('HERO.contact-me')"
           to="#contact"
           variant="btn-dark"
         />

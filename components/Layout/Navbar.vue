@@ -1,5 +1,11 @@
 <script setup lang="ts">
 const isActive = ref(false)
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+
+const availableLocales = computed(() => {
+  return locales.value.filter(i => i.code !== locale.value)
+})
 
 function navActive() {
   isActive.value = !isActive.value
@@ -29,15 +35,32 @@ function navActive() {
             <p
               class="group-hover:-translate-y-7 duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
             >
-              {{ link.label }}
+              {{ $t(`NAVLINKS.${ link.label}`) }}
             </p>
             <p
               class="absolute top-7 left-0 group-hover:top-0 duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
             >
-              {{ link.label }}
+              {{ $t(`NAVLINKS.${ link.label}`) }}
             </p>
           </div>
         </NuxtLink>
+
+        <div class="flex items-center justify-between gap-2">
+          <VsxIcon
+            iconName="LanguageSquare"
+            :size="24"
+            color="#5584FF"
+            type="linear"
+          />
+          <NuxtLink
+            class="text-white group text-xl lg:text-base"
+            v-for="locale in availableLocales"
+            :key="locale.code"
+            :to="switchLocalePath(locale.code)"
+          >
+            {{ locale.name }}
+          </NuxtLink>
+        </div>
 
         <NuxtLink
           class="lg:hidden text-white group text-xl lg:text-base"
