@@ -38,6 +38,9 @@ importers:
       vue-router:
         specifier: latest
         version: 4.6.3(vue@3.5.24(typescript@5.9.3))
+      vue3-burger-menu:
+        specifier: ^1.1.1
+        version: 1.1.1(typescript@5.9.3)
     devDependencies:
       '@types/locomotive-scroll':
         specifier: ^4.1.4
@@ -4246,6 +4249,9 @@ packages:
     resolution: {integrity: sha512-ARBedLm9YlbvQomnmq91Os7ck6efydTSpRP3nuOKCvgJOHNrhRoJDSKtee8kcL1Vf7nz6U+PMBL+hTvR3bTVQg==}
     peerDependencies:
       vue: ^3.5.0
+
+  vue3-burger-menu@1.1.1:
+    resolution: {integrity: sha512-MlI60nVFpDXz0eBLaRBQvaDDhHxW/kXaG/4Qz+gzrMkRFZ7/ESNNuMbBPXvTM2f0GuR5fY7jvRkyCx85yV7hlA==}
 
   vue@3.5.24:
     resolution: {integrity: sha512-uTHDOpVQTMjcGgrqFPSb8iO2m1DUvo+WbGqoXQz8Y1CeBYQ0FXf2z1gLRaBtHjlRz7zZUBHxjVB5VTLzYkvftg==}
@@ -9084,6 +9090,12 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.24(typescript@5.9.3)
+
+  vue3-burger-menu@1.1.1(typescript@5.9.3):
+    dependencies:
+      vue: 3.5.24(typescript@5.9.3)
+    transitivePeerDependencies:
+      - typescript
 
   vue@3.5.24(typescript@5.9.3):
     dependencies:
